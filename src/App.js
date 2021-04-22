@@ -26,7 +26,7 @@ class App extends Component {
       forceTLS: true,
       authEndpoint: "http://localhost:3333/pusher/auth",
     });
-    const channel = pusher.subscribe('orders');
+    const channel = pusher.subscribe('private-orders');
     channel.bind('message', data => {
       this.setState({ chats: [...this.state.chats, data], test: '' });
     });

@@ -6,7 +6,7 @@ export default ({ chats }) => (
   <ul>
     {chats.map(chat => {
       return (
-        <div>
+        <div key={Date.now()}>
           <div className="row show-grid">
             <div className="col-xs-12">
               
